@@ -1,9 +1,26 @@
 body {
 	font-family: "Courier New", Courier, monospace;
 	text-align: center;
+	background-color: rgb(75, 75, 75); /* Ustawia szare tło */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+#game-container {
+	border: 15px solid black; /* Dodaje czarne obramowanie przypominające telefon */
+	border-bottom: 30px solid black; /* Dolna krawędź jest szersza */
+	border-radius: 20px; /* Zaokrągla rogi, aby przypominały telefon */
+	padding: 10px;
+	background-color: #333; /* Tło wewnątrz obramowania */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #board {
-	/* background-color: skyblue; */
-	background-image: url("/Media\ &\ Images/flappybirdbg.png");
+	background-image: url("Media & Images/flappybirdbg.png");
+	display: block;
 }
