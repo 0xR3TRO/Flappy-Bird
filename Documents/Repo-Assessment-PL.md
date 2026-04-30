@@ -15,7 +15,7 @@
 
 # 2. Odczyt repo z samej struktury i dokumentacji
 - Co wiadomo na pewno:
-  - Repo to statyczna gra w przeglądarce: index.html + Directories/script.js + Directories/style.css.
+  - Repo to statyczna gra w przeglądarce: index.html + katalog „Directories/” (script.js, style.css).
   - Wykorzystuje Canvas, obrazy są w katalogu „Media & Images”.
   - Brak package.json, brak konfiguracji CI/CD, brak testów i zależności.
   - README/README(PL) opisują projekt i deklarują architekturę MVC oraz technologie (React/Node/SQLite).
@@ -69,7 +69,7 @@
   - `assets` (obrazy, dźwięki)
   - `api` (opcjonalny backend leaderboardu)
 - Kontrakty między modułami:
-  - `game-core` publikuje stan gry; `rendering` wyłącznie renderuje; `score` subskrybuje zdarzenia (np. „pipe passed”, „game over”).
+  - `game-core` publikuje stan gry; `rendering` wyłącznie renderuje; `score` subskrybuje zdarzenia (np. zaliczenie przeszkody, koniec gry).
 - Docelowe drzewo katalogów (przykładowe):
   - `src/`
     - `game-core/`
@@ -135,8 +135,8 @@
 
 # 10. Metryki sukcesu
 - Bazowe KPI + targety po wdrożeniu:
-  - DORA (Lead Time < 1 dzień, Deployment Frequency >= 1/tydz., Change Failure Rate < 15%, MTTR < 1 dzień).
-  - Jakość: coverage unit >= 60% (Założenie), 0 krytycznych issue z lint.
+  - DORA (Lead Time < 1 dzień, Deployment Frequency >= 1/tydzień, Change Failure Rate < 15%, MTTR < 1 dzień).
+  - Jakość: coverage unit >= 60% (Założenie), 0 krytycznych problemów z lint.
   - Stabilność: crash rate < 1% sesji (Założenie).
   - Wydajność: stabilne FPS > 50 na typowym urządzeniu (Założenie).
 - Jak mierzyć postęp co sprint:
